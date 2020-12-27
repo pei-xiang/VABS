@@ -10,4 +10,4 @@ This code is only used for research purposes.
 
 Please refer to the above publication if you use this code.
 
-The demo file is demo.m
+The demo file is Demo.m
