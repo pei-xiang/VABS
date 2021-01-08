@@ -7,7 +7,7 @@
 % @article{VABS, 
 % author = {Pei Xiang, Jiangluqi Song, Hanlin Qin, Wei Tan, Huan Li and Huixin Zhou},
 % title = {Visual Attention and Background Subtraction with Adaptive Weight for Hyperspectral Anomaly Detection},
-% jounal = {accepted by JSTARS},
+% jounal = {Submitted to JSTARS},
 % year = {2020}
 %
 % Version 1.0
