@@ -44,20 +44,13 @@ band_set = ocf(para_NC_IE, k);
 final_band=A(:,:,band_set);
 [rgb, iCM, oCM, gCM, Sm,Sm_HSI_IOC,Sm_HSI_IOG,Sm_HSI_IOE] = HSI_Saliency(final_band,1);
 sm=mat2gray(Sm);
-figure;
-imshow(sm);
+
 %% BS
 FilterType = 0;
 Iteration = 2000;
 [result,energy]=CF(sm, FilterType, Iteration);
-figure;
-imshow(result);
 mresult=sm-result;
-figure;
-imshow(mresult);
-
 ms=mean2(mresult);
-
 fresult=zeros(lenth,with);
 for i=1:lenth
     for j=1:with
@@ -65,11 +58,7 @@ for i=1:lenth
     end
 end
 fresult1=mat2gray(fresult);
-figure;
-imshow(fresult1);
-figure;
-imagesc(fresult1);
-axis image;
+
 %% AW
 sp=reshape(A,lenth*with,bands);
 sp1=sp';
@@ -82,16 +71,10 @@ for is=1:lenth
         dis(is,js)=acos(dot(xx,mn1)/(norm(xx)*norm(mn1)));
     end
 end
-figure;
-imshow(dis);
-figure;
-imagesc(dis);
-axis image;
+
 
 ffresult=fresult1.*dis;
 ffresult=mat2gray(ffresult);
-figure;
-imshow(ffresult);
 figure;
 imagesc(ffresult);
 axis image;
