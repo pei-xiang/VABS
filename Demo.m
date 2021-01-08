@@ -99,5 +99,5 @@ area = sum((PF8(1:end-1)-PF8(2:end)).*(PD8(2:end)+PD8(1:end-1))/2);
 figure,
 plot(PF8, PD8, 'b', 'LineWidth', 3);
 xlabel('False alarm rate'); ylabel('Probability of detection');
-legend('VABC')
+legend('VABS')
 axis([0 1 0 1])
